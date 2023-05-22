@@ -7,7 +7,7 @@ import 'normalize.css'
 
 export default function Home() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCtSYwNr8WCyxcAc9vLQF6qgJ63Op5EaNc",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
 
   if (!isLoaded) {
