@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-import recycleIcon from './assets/icon.svg';
-
 import styles from "./Map.module.css";
 
 export const Map = () => {
@@ -109,6 +107,8 @@ export const Map = () => {
 			marker.addListener("click", () => {
 				infoWindow.setContent(`<div><strong>${center.name}</strong><br>${center.address}</div>`);
 				infoWindow.open(map, marker);
+				map.setCenter(marker.getPosition());
+				map.setZoom(15);
 			});
 		});
 	}
