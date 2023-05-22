@@ -1,6 +1,8 @@
-import { Map } from "../sections/Map/Map";
 import { useLoadScript } from "@react-google-maps/api";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+
+import { Map } from "../sections/Map/Map";
+
 import 'normalize.css'
 
 export default function Home() {
