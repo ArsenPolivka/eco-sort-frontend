@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 import styles from "./Map.module.css";
 
@@ -56,7 +57,7 @@ export const Map = () => {
 	useEffect(() => {
 		// Load the Google Maps JavaScript API script
 		const script = document.createElement("script");
-		script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCtSYwNr8WCyxcAc9vLQF6qgJ63Op5EaNc&callback=initMap`;
+		script.src = process.env.NEXT_PUBLIC_SCRIPT_SRC;
 		script.defer = true;
 		script.async = true;
 		window.initMap = initMap;
